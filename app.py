@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from datetime import datetime
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory
 from app import *
 app = Flask(__name__)
 
@@ -25,5 +26,4 @@ def mobile():
     return render_template("mobile.html")
     
 if __name__ == '__main__':
-    # app.run(host='127.0.0.1', port=5500, debug=True)
-    app.run(debug=True)
+    app.run()
